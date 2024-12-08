@@ -1,5 +1,5 @@
 title: Sid's Shield
-description: Baby monitor
+description: Baby monitor to detect harmful conditions such as high/low temperature, incorrect position, high/low pressure. or altered breathing.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-architect
