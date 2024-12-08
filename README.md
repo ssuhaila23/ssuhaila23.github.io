@@ -2,8 +2,11 @@
 Baby monitor to detect harmful conditions such as high/low temperature, incorrect position, high/low pressure. or altered breathing.
 
 theme: jekyll-theme-minimal
+
 title: Sid's Shield Homepage
+
 Group: Arushi Mittal, Ashley Tang, Suhaila Shankar
-description: Baby monitor to detect harmful conditions such as high/low temperature, incorrect position, high/low pressure. or altered breathing.
+
+Description: Baby monitor to detect harmful conditions such as high/low temperature, incorrect position, high/low pressure. or altered breathing.
 
 
