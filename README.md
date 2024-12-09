@@ -11,7 +11,7 @@ Description of Hardware: Macbook M1 Chip, Atmega 328PB, ESP32 Feather Board, lev
 
 ### 1. Video and Images
 
-[Final Demo Video](https://drive.google.com/file/d/1bRj_aib5RoBTjQsctpmj98ZeIZh_iGJq/view?usp=sharing)
+[Final Demo Video](https://drive.google.com/file/d/1mrnhKHWKpB4Ow6MOxHa2QvgC0DBfqLqM/view?usp=sharing)
 
 ![](IMG_4930.jpg)
 ![](IMG_4933_2.jpg)
@@ -51,9 +51,22 @@ We met our hardware requirements which included using an IMU sensor to detect if
 
 #### 3.3 System Block Diagram 
 
-* ![](2024-12-01-22-24-57.png)
+![](2024-12-01-22-24-57.png)
 
+#### 3.4 Project Complexity
+
+* (Timers): Timers are used to generate a periodic signal for the buzzer and the timer is set to CTC mode and toggles the buzzer's pin when the buzzer is active. 
+* (ADC): The temperature, pressure and piezoelectric sensors use ADC pins to convert the analog signal to a digital value and the values are used to control the LEDs which light up if the value is out of the optimal range. 
+* (Wireless Communication): We used wireless communication and the Blynk notification app to send notifications if the baby is flipped over, not breathing, or is experiencing an unsafe temperature or pressure. We used an ESP32 Feather board and Arduino to notify Blynk if a sensor detected a harmful condition for the baby. 
+  
 ### 4. Conclusion and Next Steps
 
-We learned how to modularize components of a project, splitting work between team members for different sensors and later integrating the sensors into the module. We had a bit of trouble getting the piezoelectric sensor to work, and we first thought that we needed an op amp to amplify the signal, but we realized that the piezoelectric uses force to convert to a voltage so we do not need an external voltage supply. We are proud of our protoboard and second iteration of our design which is clean and able to be placed on top of the baby doll. The wireless component of our project is also seamless and gives instant notifications for high temperature, pressure, flipped baby, or stoppped breathing. We learned how to debug code when integrating different components and hardware debugging such as using an oscilloscope and multimeter to measure if a signal is being sent or if the op amp performs the expected amplification. A next step for the project is to focus on power management and ensure that the components are being supplied the right amount of voltage and incorporating a shock absorption system so that the device is safe for babies to use. We would also like to stitch the components inside of a baby suit so that the wires and electronic components are nt accessible to the baby. 
+#### 4.1 Challenges
+
+* (Piezoelectric Sensor): We first thought that we needed an op amp to amplify the signal, but we realized that the piezoelectric uses force to convert to a voltage so we do not need an external voltage supply.
+* (Integration): We are glad that we kept the breadboard version of our circuit and used new components when soldering the circuit onto our protoboard. This helped us debug the circuit if certain parts of the circuit did not work. We learned how to debug code when integrating different components and hardware debugging such as using an oscilloscope and multimeter to measure if a signal is being sent or if the op amp performs the expected amplification. Once we had two sensors working, we merged the code and performed integration throughout the project instead of waiting until the end which helped to debug quicker. 
+  
+#### 4.2 Reflections
+
+We learned how to modularize components of a project, splitting work between team members for different sensors and later integrating the sensors into the module.  We are proud of our protoboard and second iteration of our design which is clean and able to be placed on top of the baby doll. The wireless component of our project is also seamless and gives instant notifications for high temperature, pressure, flipped baby, or stoppped breathing.  A next step for the project is to focus on power management and ensure that the components are being supplied the right amount of voltage and incorporating a shock absorption system so that the device is safe for babies to use. We would also like to stitch the components inside of a baby suit so that the wires and electronic components are not accessible to the baby. 
 
